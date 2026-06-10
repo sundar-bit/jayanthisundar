@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jayanthi Sundar | Founder - Thrive Gut Academy, DTM, Corporate Trainer, Bharatanatyam Dancer & Author</title>
+    <title>Jayanthi Sundar | Wellness Coach, Corporate Trainer, Speaker, Bharatanatyam Artist & Author</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Jayanthi Sundar is a multifaceted personality — Founder of Thrive Gut Academy, Distinguished Toastmaster, Corporate Trainer, Software Professional, Bharatanatyam Dancer, Vocal Singer, Master of Ceremony, Author of Gut Leadership, and Kindergarten Teacher based in Chennai, India.">
-    <meta name="keywords" content="Jayanthi Sundar, Thrive Gut Academy, Distinguished Toastmaster, DTM, Corporate Trainer, Bharatanatyam Dancer, Vocal Singer, Master of Ceremony, Gut Leadership, Functional Nutrition, Software Professional, Chennai">
+    <meta name="description" content="Jayanthi Sundar — Founder of Thrive Gut Academy, Corporate Trainer, Keynote Speaker, Distinguished Toastmaster, Bharatanatyam Artist, Author of Gut Leadership. Based in Chennai, India.">
+    <meta name="keywords" content="Jayanthi Sundar, Thrive Gut Academy, Distinguished Toastmaster, DTM, Corporate Trainer, Keynote Speaker, Life Coach, Bharatanatyam Artist, Master of Ceremony, Gut Leadership, Functional Nutrition, Chennai">
     <meta name="author" content="Jayanthi Sundar">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Jayanthi Sundar | A Multifaceted Personality">
-    <meta property="og:description" content="Founder of Thrive Gut Academy, Distinguished Toastmaster, Corporate Trainer, Software Professional, Bharatanatyam Dancer, Vocal Singer, Author & More.">
+    <meta property="og:title" content="Jayanthi Sundar | Wellness Coach, Trainer, Speaker, Artist & Author">
+    <meta property="og:description" content="Founder of Thrive Gut Academy, Corporate Trainer, Keynote Speaker, DTM, Bharatanatyam Artist, Author of Gut Leadership.">
     <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="Jayanthi Sundar">
 
@@ -408,106 +408,24 @@
             font-weight: 600;
         }
 
-        /* ==================== IMAGE GALLERY ==================== */
-        .photo-gallery {
+        /* ==================== SIDE-BY-SIDE IMAGE GRID ==================== */
+        .img-grid {
+            margin: 30px 0;
             display: grid;
-            grid-template-columns: repeat(4, 200px);
-            gap: 15px;
-            margin-top: 40px;
-            justify-content: center;
-        }
-
-        .photo-gallery-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 8px;
-            aspect-ratio: 1;
-            cursor: pointer;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .photo-gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-
-        .photo-gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.3s;
-        }
-
-        .photo-gallery-item:hover img {
-            transform: scale(1.05);
-        }
-
-        .photo-gallery-item .overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(transparent, rgba(26,35,50,0.9));
-            color: var(--white);
-            padding: 15px 10px 10px;
-            font-size: 0.75rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s;
         }
-
-        .photo-gallery-item:hover .overlay {
-            opacity: 1;
-        }
-
-        /* Lightbox */
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
+        .img-grid img {
             width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.95);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
+            border-radius: 12px;
         }
-
-        .lightbox.active {
-            display: flex;
+        .img-grid p {
+            margin-top: 10px;
+            font-size: 0.9rem;
+            color: var(--navy-600);
+            font-style: italic;
         }
-
-        .lightbox img {
-            max-width: 90%;
-            max-height: 90%;
-            object-fit: contain;
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: var(--white);
-            font-size: 2.5rem;
-            cursor: pointer;
-            z-index: 2001;
-        }
-
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: var(--white);
-            font-size: 2rem;
-            cursor: pointer;
-            padding: 20px;
-            z-index: 2001;
-        }
-
-        .lightbox-prev { left: 20px; }
-        .lightbox-next { right: 20px; }
 
         /* ==================== FOOTER ==================== */
         .site-footer {
@@ -603,10 +521,6 @@
                 background: var(--navy-700);
                 color: var(--gold-400);
             }
-
-            .photo-gallery {
-                grid-template-columns: repeat(3, 180px);
-            }
         }
 
         @media (max-width: 600px) {
@@ -616,10 +530,6 @@
             .hero-tagline { font-size: 1.2rem; padding: 0 10px; }
             .section-title { font-size: 1.5rem; }
             .footer-links a { display: block; margin: 8px 0; }
-            .photo-gallery {
-                grid-template-columns: repeat(2, 140px);
-                gap: 10px;
-            }
         }
     </style>
 
@@ -633,12 +543,10 @@
                 "name": "Jayanthi Sundar",
                 "givenName": "Jayanthi",
                 "familyName": "Sundar",
-                "description": "Founder of Thrive Gut Academy, Distinguished Toastmaster, Corporate Trainer, Software Professional, Bharatanatyam Dancer, Vocal Singer, Master of Ceremony, Author, and Kindergarten Teacher",
-                "jobTitle": ["Founder - Thrive Gut Academy", "Corporate Trainer", "Software Professional", "Master of Ceremony"],
+                "description": "Founder of Thrive Gut Academy, Corporate Trainer, Keynote Speaker, Distinguished Toastmaster, Master of Ceremony, Bharatanatyam Artist, Author of Gut Leadership",
+                "jobTitle": ["Founder - Thrive Gut Academy", "Corporate Trainer", "Keynote Speaker", "Life Coach", "Master of Ceremony"],
                 "knowsAbout": ["Functional Nutrition", "Gut Health", "Corporate Training", "Bharatanatyam", "Toastmasters", "Carnatic Vocal Music", "Software Engineering"],
                 "award": ["Distinguished Toastmaster (DTM)"],
-                "telephone": "+91-9840282465",
-                "email": "jayanthisundar2k@yahoo.com",
                 "address": {
                     "@type": "PostalAddress",
                     "addressLocality": "Chennai",
@@ -647,7 +555,8 @@
                 },
                 "sameAs": [
                     "https://www.linkedin.com/in/jayanthispeaks/",
-                    "https://www.instagram.com/jayanthi_functional_nutrition/"
+                    "https://www.instagram.com/jayanthi_functional_nutrition/",
+                    "https://www.youtube.com/@functionalnutrition-Jayanthi"
                 ]
             },
             {
@@ -668,11 +577,9 @@
             <div class="top-bar-left">
                 <a href="https://www.linkedin.com/in/jayanthispeaks/" target="_blank">LinkedIn</a>
                 <a href="https://www.instagram.com/jayanthi_functional_nutrition/" target="_blank">Instagram</a>
+                <a href="https://www.youtube.com/@functionalnutrition-Jayanthi/shorts" target="_blank">YouTube</a>
             </div>
-            <div class="top-bar-right">
-                <a href="tel:+919840282465">+91 9840282465</a> &nbsp;|&nbsp;
-                <a href="mailto:jayanthisundar2k@yahoo.com">jayanthisundar2k@yahoo.com</a>
-            </div>
+            <div class="top-bar-right"></div>
         </div>
     </div>
 
@@ -689,82 +596,69 @@
 
             <nav class="main-nav" id="mainNav">
                 <ul>
-                    <!-- THRIVE GUT ACADEMY -->
+                    <!-- WELLNESS COACH -->
                     <li>
-                        <a href="#thrive-gut-academy">GUT ACADEMY</a>
+                        <a href="#wellness-coach">WELLNESS COACH</a>
                         <ul class="dropdown">
-                            <li><a href="#thrive-gut-academy">Thrive Gut Academy</a></li>
-                            <li><a href="#gut-services">Services</a></li>
-                            <li><a href="#gut-leadership">Gut Leadership (Book)</a></li>
+                            <li><a href="#wellness-coach">Director, Thrive Gut Academy</a></li>
                         </ul>
                     </li>
 
                     <!-- CORPORATE TRAINER -->
                     <li>
-                        <a href="#corporate-trainer">TRAINER</a>
+                        <a href="#corporate-trainer">CORPORATE TRAINER</a>
                         <ul class="dropdown">
-                            <li><a href="#corporate-trainer">Corporate Trainer</a></li>
+                            <li><a href="#champion-woman">ChampionWoman</a></li>
+                            <li><a href="#corporate-trainer">Others</a></li>
                         </ul>
                     </li>
 
-                    <!-- SOFTWARE PROFESSIONAL -->
+                    <!-- SPEAKER -->
                     <li>
-                        <a href="#software-professional">SOFTWARE</a>
+                        <a href="#speaker">SPEAKER</a>
                         <ul class="dropdown">
-                            <li><a href="#software-professional">Software Professional</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- TOASTMASTER -->
-                    <li>
-                        <a href="#toastmaster">TOASTMASTER</a>
-                        <ul class="dropdown">
-                            <li><a href="#toastmaster">Distinguished Toastmaster</a></li>
+                            <li><a href="#speaker">Distinguished Toastmaster</a></li>
                             <li><a href="#master-of-ceremony">Master of Ceremony</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- PERFORMING ARTS -->
-                    <li>
-                        <a href="#bharatanatyam">PERFORMING ARTS</a>
-                        <ul class="dropdown">
-                            <li><a href="#bharatanatyam">Bharatanatyam Dancer</a></li>
-                            <li><a href="#vocal-singer">Vocal Singer</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- TV INTERVIEWER -->
-                    <li>
-                        <a href="#tv-interviewer">TV</a>
-                        <ul class="dropdown">
-                            <li><a href="#tv-interviewer">Doordarshan Interviewer</a></li>
-                        </ul>
-                    </li>
-
-                    <!-- KINDERGARTEN TEACHER -->
-                    <li>
-                        <a href="#kindergarten-teacher">EDUCATOR</a>
-                        <ul class="dropdown">
-                            <li><a href="#kindergarten-teacher">Kindergarten Teacher</a></li>
                         </ul>
                     </li>
 
                     <!-- AUTHOR -->
                     <li>
-                        <a href="#gut-leadership">AUTHOR</a>
+                        <a href="#author">AUTHOR</a>
                         <ul class="dropdown">
-                            <li><a href="#gut-leadership">Gut Leadership</a></li>
+                            <li><a href="#author">Gut Leadership</a></li>
                         </ul>
                     </li>
 
-                    <!-- QUALIFICATIONS -->
+                    <!-- ARTIST -->
                     <li>
-                        <a href="#qualifications">QUALIFICATIONS</a>
+                        <a href="#artist">ARTIST</a>
                         <ul class="dropdown">
-                            <li><a href="#qualifications">Master of Fine Arts</a></li>
-                            <li><a href="#qualifications">Chemical Engineer</a></li>
-                            <li><a href="#certifications">Functional Nutrition Certificate</a></li>
+                            <li><a href="#artist">Bharatanatyam Dancer</a></li>
+                            <li><a href="#carnatic-music">Carnatic Singer</a></li>
                         </ul>
+                    </li>
+
+                    <!-- MEDIA -->
+                    <li>
+                        <a href="#media">MEDIA</a>
+                        <ul class="dropdown">
+                            <li><a href="#media">Doordarshan</a></li>
+                            <li><a href="#all-india-radio">All India Radio</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- TECH LEADER -->
+                    <li>
+                        <a href="#tech-leader">TECH LEADER</a>
+                        <ul class="dropdown">
+                            <li><a href="#tech-leader">18 Years at Cognizant</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- BOOK ME -->
+                    <li>
+                        <a href="#contact" style="color: var(--gold-400);">BOOK ME</a>
                     </li>
                 </ul>
             </nav>
@@ -775,36 +669,30 @@
     <section class="hero">
         <div class="container">
             <h1 class="hero-title">Jayanthi Sundar</h1>
-            <p class="hero-subtitle">Founder &mdash; Thrive Gut Academy | DTM | Corporate Trainer | Bharatanatyam Dancer | Doordarshan Interviewer | Author</p>
-            <p class="hero-tagline">
-                A multifaceted personality who believes in <em>continuous reinvention</em> &mdash; from nurturing gut health to nurturing young minds, from the corporate boardroom to the Bharatanatyam stage, life is a canvas of endless possibilities.
-            </p>
+            <p class="hero-subtitle">Wellness Coach | Corporate Trainer | Keynote Speaker | Bharatanatyam Artist</p>
             <div class="hero-photo">
-                <!-- Replace with Jayanthi's photo -->
-                <img alt="Jayanthi Sundar - Founder of Thrive Gut Academy, DTM, Corporate Trainer, Bharatanatyam Dancer and Author" src="jayanthi.jpg">
-            </div>
-            <div class="hero-more">
-                <a href="#thrive-gut-academy">EXPLORE MY JOURNEY</a>
+                <img alt="Jayanthi Sundar" src="jayanthi.jpg">
             </div>
         </div>
     </section>
 
-    <!-- ==================== THRIVE GUT ACADEMY ==================== -->
-    <section id="thrive-gut-academy" style="padding: 70px 0; background: var(--white);">
+    <!-- ==================== 1. WELLNESS COACH ==================== -->
+    <section id="wellness-coach" style="padding: 40px 0; background: var(--white);">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title">Thrive Gut Academy</h2>
-                <p class="section-subtitle">Founder &amp; Functional Nutrition Coach</p>
+                <h2 class="section-title">Wellness Coach</h2>
+                <p class="section-subtitle">Founder &amp; Functional Nutrition Coach &mdash; Thrive Gut Academy</p>
 
                 <p class="section-text">
-                    Jayanthi Sundar is the <strong>Founder of Thrive Gut Academy</strong> &mdash; a space where nutrition meets transformation. With a deep conviction that <em>"you are not just what you eat... you are what your gut absorbs, digests, and trusts,"</em> she combines functional nutrition, personalized gut assessments, and science-backed microbiome testing to guide people toward a pill-free, vibrant life.
+                    Jayanthi Sundar is the <strong>Founder of Thrive Gut Academy</strong> and a <strong>Certified Health Coach</strong>. With a deep conviction that <em>"you are not just what you eat... you are what your gut absorbs, digests, and trusts,"</em> she combines functional nutrition, personalized gut assessments, and science-backed microbiome testing to guide people toward a pill-free, vibrant life.
                 </p>
                 <p class="section-text">
-                    With over <strong>20+ years in the IT industry</strong> and a lifelong passion for wellness, Jayanthi bridges the worlds of technology and holistic health. Thrive Gut Academy is built on three pillars: <strong>personalized gut reconnection</strong> through assessments and guidance, <strong>collaborative partnerships</strong> with hospitals, labs, and wellness brands, and <strong>workplace wellness solutions</strong> addressing employee burnout and focus.
+                    Thrive Gut Academy is built on three pillars: <strong>personalized gut reconnection</strong> through assessments and guidance, <strong>collaborative partnerships</strong> with hospitals, labs, and wellness brands, and <strong>workplace wellness solutions</strong> addressing employee burnout and focus.
                 </p>
 
                 <div style="margin-bottom: 30px; display: flex; gap: 15px; flex-wrap: wrap;">
                     <a href="https://66b5d5b232928.site123.me/" target="_blank" class="btn-gold">Visit Thrive Gut Academy &rarr;</a>
+                    <a href="https://www.youtube.com/@functionalnutrition-Jayanthi/shorts" target="_blank" rel="noopener" class="btn-gold">Functional Nutrition Shorts on YouTube &rarr;</a>
                 </div>
 
                 <h3 class="section-heading" id="gut-services">Services</h3>
@@ -812,95 +700,128 @@
                 <div style="display: grid; gap: 20px;">
                     <div class="card">
                         <h4>Corporate Wellness Workshops</h4>
-                        <p>Interactive sessions designed for employee well-being, focusing on energy boost, stress reduction, and gut-brain wellness in workplace settings. Helping organizations build healthier, more focused teams.</p>
+                        <p>Interactive sessions designed for employee well-being, focusing on energy boost, stress reduction, and gut-brain wellness in workplace settings.</p>
                     </div>
                     <div class="card">
                         <h4>Personalized Gut Health Assessments</h4>
-                        <p>Individual evaluations providing customized insights that go beyond diet charts &mdash; personalized, practical, and rooted in the science of Functional Nutrition. Each assessment is tailored to the individual's unique gut profile.</p>
+                        <p>Individual evaluations providing customized insights that go beyond diet charts &mdash; personalized, practical, and rooted in the science of Functional Nutrition.</p>
                     </div>
                     <div class="card">
                         <h4>Gut Health Awareness Programs</h4>
-                        <p>Educational presentations, interactive workshops, and campaigns aimed at raising awareness and promoting proactive lifestyle changes. Making gut health practical and powerful for everyday life.</p>
+                        <p>Educational presentations, interactive workshops, and campaigns aimed at raising awareness and promoting proactive lifestyle changes.</p>
                     </div>
                 </div>
 
+                <h3 class="section-heading">Speaking: IIF &ndash; MMA Joint Program</h3>
+                <p class="section-text">
+                    Invited speaker at a joint initiative by <strong>The Institute of Indian Foundrymen (IIF)</strong> and the <strong>Madras Management Association (MMA)</strong>, Jayanthi spoke on <em>"The Second Brain: Unlocking Gut Power for Peak Performance"</em> &mdash; sharing how gut health influences stress resilience, clarity, and productivity for decision-makers and industry leaders.
+                </p>
+
+                <div class="img-grid">
+                    <div>
+                        <img src="Images/1753614097298.jpeg" alt="Jayanthi Sundar speaking at IIF-MMA Joint Program">
+                    </div>
+                    <div>
+                        <img src="Images/with shield.JPG" alt="Jayanthi Sundar at IIF-MMA Joint Program">
+                    </div>
+                </div>
+
+                <h3 class="section-heading" id="indian-bank">Gut Leadership Training &mdash; Indian Bank</h3>
+                <p class="section-text">
+                    Jayanthi conducted a 3-hour <strong>Gut Leadership</strong> training session for <strong>Women Managers at Indian Bank</strong>, sharing powerful insights on how gut health directly impacts leadership abilities, decision-making, and overall well-being. The session covered mindful nutrition for energy and focus, sustainable fitness routines for busy schedules, the mind-gut connection for better decision-making, and cultivating work-life harmony.
+                </p>
+
+                <div style="margin: 30px 0; text-align: center;">
+                    <img src="Images/1745340184986.jpeg" alt="Jayanthi Sundar - Gut Leadership training for Women Managers at Indian Bank" style="max-width: 100%; width: 560px; border-radius: 12px;">
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--navy-600); font-style: italic;">Gut Leadership session for Women Managers, Indian Bank</p>
+                </div>
+
+                <h3 class="section-heading" id="andhra-chamber">Gut Leadership &mdash; Andhra Chamber of Commerce</h3>
+                <p class="section-text">
+                    Invited speaker at the prestigious <strong>Andhra Chamber of Commerce</strong>, delivering a session on <em>"GUT Leadership"</em> &mdash; exploring the connection between gut health and leadership qualities like clarity, resilience, and decision-making.
+                </p>
+
+                <div style="margin: 30px 0; text-align: center;">
+                    <img src="Images/1732637136993.jpeg" alt="Jayanthi Sundar - Gut Leadership session at Andhra Chamber of Commerce" style="max-width: 100%; width: 560px; border-radius: 12px;">
+                </div>
+
                 <div class="highlight-box" style="margin-top: 40px;">
-                    <p><span class="accent">Thrive Gut Academy</span> &mdash; Where awareness, collaboration, and education make gut health practical and powerful</p>
+                    <p><span class="accent">Thrive Gut Academy</span> &mdash; MSME-Registered (June 2025) | <strong>300+ women</strong> supported through the science of gut health and functional nutrition</p>
+                </div>
+
+                <h3 class="section-heading" id="champion-woman">ChampionWoman</h3>
+                <p class="section-text">
+                    Jayanthi is a proud member of <strong>ChampionWoman</strong>, a prestigious community where strong women lift each other higher. As a Leading Life Coach, she has <strong>inspired 1,000+ women</strong> through this platform &mdash; empowering them with confidence, career readiness, and the belief that together, women are unstoppable.
+                </p>
+
+                <div style="margin: 30px 0; text-align: center;">
+                    <img src="Images/1754276873490.jpeg" alt="Jayanthi Sundar with ChampionWoman community" style="max-width: 100%; width: 560px; border-radius: 12px;">
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--navy-600); font-style: italic;">With the ChampionWoman tribe</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== CORPORATE TRAINER ==================== -->
-    <section id="corporate-trainer" style="padding: 70px 0; background: var(--cream);">
+    <!-- ==================== 2. CORPORATE TRAINER ==================== -->
+    <section id="corporate-trainer" style="padding: 40px 0; background: var(--cream);">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
                 <h2 class="section-title">Corporate Trainer</h2>
                 <p class="section-subtitle">Empowering Professionals &amp; Teams</p>
 
                 <p class="section-text">
-                    Jayanthi Sundar is a seasoned <strong>Corporate Trainer</strong> who brings a unique blend of IT industry experience, communication expertise, and wellness knowledge to her training sessions. Her programs are designed to inspire, engage, and transform professionals at every level.
+                    Jayanthi Sundar is a seasoned <strong>Corporate Trainer, Keynote Speaker, and Life Coach</strong> who brings a unique blend of IT industry experience, communication expertise, and wellness knowledge to her training sessions. She has <strong>inspired and motivated more than 1,000 women professionals and college students</strong> through transformative programs on workplace readiness, professional communication, personal branding, grooming, and career confidence.
                 </p>
                 <p class="section-text">
-                    With her background as a Distinguished Toastmaster, software professional, and functional nutrition expert, Jayanthi delivers training that is both practical and impactful. Her sessions are known for their energy, interactivity, and real-world applicability.
+                    Her interactive, high-energy sessions deliver emotional wellbeing along with workplace productivity. She has trained professionals in India and globally, including Shanghai. Notable speaking engagements include <strong>IIF, Cognizant, Indian Bank, and the Andhra Chamber of Commerce</strong>.
                 </p>
 
-                <h3 class="section-heading">Training Areas</h3>
+                <h3 class="section-heading">Training &amp; Speaking Areas</h3>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px;">
                     <div style="padding: 15px 20px; background: var(--gray-100); border-left: 4px solid var(--gold-500);">
-                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Communication Skills</span>
+                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Women Empowerment</span>
                     </div>
                     <div style="padding: 15px 20px; background: var(--gray-100); border-left: 4px solid var(--gold-500);">
-                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Leadership Development</span>
+                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Leadership &amp; Communication</span>
                     </div>
                     <div style="padding: 15px 20px; background: var(--gray-100); border-left: 4px solid var(--gold-500);">
-                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Workplace Wellness</span>
+                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Work-Life Balance</span>
                     </div>
                     <div style="padding: 15px 20px; background: var(--gray-100); border-left: 4px solid var(--gold-500);">
-                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Public Speaking</span>
+                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Agile &amp; Design Thinking</span>
                     </div>
                     <div style="padding: 15px 20px; background: var(--gray-100); border-left: 4px solid var(--gold-500);">
                         <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Gut-Brain Wellness</span>
                     </div>
                     <div style="padding: 15px 20px; background: var(--gray-100); border-left: 4px solid var(--gold-500);">
-                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Team Building</span>
+                        <span style="font-size: 0.95rem; color: var(--navy-800); font-weight: 500;">Mind Mapping</span>
                     </div>
                 </div>
 
-                <!-- Placeholder for training photos -->
-                <div class="photo-gallery" id="trainer-gallery">
-                    <!-- Add training photos here -->
+                <blockquote style="margin: 30px 0; padding: 20px 25px; background: var(--gray-100); border-left: 4px solid var(--gold-500); color: var(--navy-800); border-radius: 0 8px 8px 0;">
+                    <p style="font-style: italic; margin-bottom: 10px;">"Her insights on communication, the VOICE framework and the mute leadership activity were eye-opening and helped us understand the power of presence, clarity, and non-verbal expression. She beautifully reminded us that communication is not about perfection &mdash; it's about intention."</p>
+                    <span style="font-size: 0.85rem; color: var(--navy-600);">&mdash; Centre for Transformational Leadership, KCG College of Technology</span>
+                </blockquote>
+
+                <div style="margin: 30px 0; text-align: center;">
+                    <img src="Images/1772074321138.jpeg" alt="Jayanthi Sundar - Training session at KCG College of Technology" style="max-width: 100%; width: 560px; border-radius: 12px;">
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--navy-600); font-style: italic;">Leadership &amp; Communication session at KCG College of Technology</p>
+                </div>
+
+                <div style="margin: 30px 0; text-align: center;">
+                    <img src="Images/511607879_10238846633372519_8759550653806640810_n.jpg" alt="Jayanthi Sundar - Corporate Training Session" style="max-width: 100%; width: 560px; border-radius: 12px;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SOFTWARE PROFESSIONAL ==================== -->
-    <section id="software-professional" style="padding: 70px 0; background: var(--white);">
+    <!-- ==================== 3. SPEAKER ==================== -->
+    <section id="speaker" style="padding: 40px 0; background: var(--white);">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title">Software Professional</h2>
-                <p class="section-subtitle">20+ Years in the IT Industry</p>
-
-                <p class="section-text">
-                    Jayanthi Sundar has had a distinguished career spanning <strong>over two decades in the IT industry</strong>. Her journey through the technology sector has given her a deep understanding of corporate dynamics, project management, and the evolving landscape of software engineering.
-                </p>
-                <p class="section-text">
-                    Her extensive experience in the software industry forms the backbone of her versatility &mdash; enabling her to bridge technology with wellness, communication, and leadership. This rare combination makes her uniquely positioned to understand and address the challenges faced by today's professionals.
-                </p>
-
-                <!-- Placeholder for career highlights or company logos -->
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== DISTINGUISHED TOASTMASTER ==================== -->
-    <section id="toastmaster" style="padding: 70px 0; background: var(--cream);">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title">Distinguished Toastmaster</h2>
-                <p class="section-subtitle">DTM &mdash; The Highest Achievement in Toastmasters International</p>
+                <h2 class="section-title">Speaker</h2>
+                <p class="section-subtitle">Distinguished Toastmaster &mdash; The Highest Achievement in Toastmasters International</p>
 
                 <p class="section-text">
                     Jayanthi Sundar has earned the prestigious <strong>Distinguished Toastmaster (DTM)</strong> title &mdash; the highest educational achievement awarded by Toastmasters International. This accomplishment reflects years of dedication to mastering the art of public speaking and leadership.
@@ -913,134 +834,61 @@
                     <p><span class="accent">Distinguished Toastmaster (DTM)</span> &mdash; Demonstrating excellence in both Communication and Leadership tracks of Toastmasters International</p>
                 </div>
 
-                <!-- Placeholder for Toastmasters photos -->
-                <div class="photo-gallery" id="tm-gallery">
-                    <!-- Add Toastmasters photos here -->
+                <div class="img-grid">
+                    <div>
+                        <img src="Images/497529196_10238144921150152_2384096753442182975_n.jpg" alt="Jayanthi Sundar as a Speaker">
+                    </div>
+                    <div>
+                        <img src="Images/TM IN USA1.jpg" alt="Jayanthi Sundar - Best Table Topics Speaker ribbon, Dallas 2023">
+                    </div>
+                    <div>
+                        <img src="Images/TM IN USA2.jpg" alt="Jayanthi Sundar - Toastmasters in Dallas, USA 2023">
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
+                <p style="text-align: center; font-size: 0.9rem; color: var(--navy-600); font-style: italic;">Won Best Table Topics Speaker ribbon, Dallas, USA, 2023</p>
 
-    <!-- ==================== MASTER OF CEREMONY ==================== -->
-    <section id="master-of-ceremony" style="padding: 70px 0; background: var(--white);">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title">Master of Ceremony</h2>
-                <p class="section-subtitle">Anchoring Events with Grace &amp; Energy</p>
+                <div style="margin: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center;">
+                    <div>
+                        <img src="Images/PSAI.jpg" alt="Jayanthi Sundar - Member of Professional Speakers Association of India" style="width: 100%; height: 280px; object-fit: cover; object-position: top; border-radius: 12px;">
+                        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--navy-600); font-style: italic;">Member, PSAI, 2019</p>
+                    </div>
+                    <div>
+                        <img src="Images/PSAI1.jpg" alt="Jayanthi Sundar as MC at PSAI event" style="width: 100%; height: 280px; object-fit: cover; object-position: top; border-radius: 12px;">
+                        <p style="margin-top: 10px; font-size: 0.9rem; color: var(--navy-600); font-style: italic;">MC at the PSAI event</p>
+                    </div>
+                </div>
 
+                <!-- Master of Ceremony -->
+                <h3 class="section-heading" id="master-of-ceremony">Master of Ceremony</h3>
                 <p class="section-text">
                     Jayanthi Sundar is a sought-after <strong>Master of Ceremony (MC / Emcee)</strong> known for her warm presence, impeccable timing, and ability to connect with diverse audiences. Whether it is a corporate event, a cultural celebration, or a community gathering, Jayanthi brings the right blend of professionalism and personal charm.
                 </p>
-                <p class="section-text">
-                    Her background as a Distinguished Toastmaster, Bharatanatyam dancer, and vocal singer adds a unique flair to her emceeing &mdash; she can seamlessly weave in cultural references, humor, and audience engagement to make every event memorable.
-                </p>
 
-                <!-- Placeholder for MC event photos -->
-                <div class="photo-gallery" id="mc-gallery">
-                    <!-- Add MC/Emcee photos here -->
+                <div style="margin: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center;">
+                    <div>
+                        <img src="Images/278845510_10228436548646907_3470105629561901296_n.jpg" alt="Jayanthi Sundar as Master of Ceremony" style="width: 100%; height: 300px; object-fit: cover; object-position: top; border-radius: 12px;">
+                    </div>
+                    <div>
+                        <img src="Images/MC.jpg" alt="Jayanthi Sundar as Master of Ceremony" style="width: 100%; height: 300px; object-fit: cover; object-position: top; border-radius: 12px;">
+                    </div>
+                    <div>
+                        <img src="Images/Anchor01.jpg" alt="Jayanthi Sundar as Master of Ceremony" style="width: 100%; height: 300px; object-fit: cover; object-position: top; border-radius: 12px;">
+                    </div>
+                    <div>
+                        <img src="Images/Anchor-03.jpg" alt="Jayanthi Sundar as Master of Ceremony" style="width: 100%; height: 300px; object-fit: cover; object-position: top; border-radius: 12px;">
+                    </div>
                 </div>
+
+                <div style="margin-bottom: 30px;">
+                    <a href="https://www.youtube.com/@Shreejayanthi" target="_blank" rel="noopener" class="btn-gold">How to be an Anchor &mdash; YouTube Channel &rarr;</a>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ==================== BHARATANATYAM DANCER ==================== -->
-    <section id="bharatanatyam" style="padding: 70px 0; background: var(--cream);">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title">Bharatanatyam Dancer</h2>
-                <p class="section-subtitle">Classical Dance &mdash; A Lifelong Passion</p>
-
-                <p class="section-text">
-                    Jayanthi Sundar is a trained <strong>Bharatanatyam dancer</strong>, carrying forward a lifelong passion for this ancient Indian classical dance form. Bharatanatyam is not just a performing art for Jayanthi &mdash; it is a spiritual practice, a discipline, and a way of life.
-                </p>
-                <p class="section-text">
-                    Her training in Bharatanatyam has enriched every other facet of her life &mdash; from the grace she brings to the stage as an emcee, to the discipline she applies in her professional career, to the mindfulness she channels into her wellness practice. Dance remains at the heart of who she is.
-                </p>
-
-                <!-- Bharatanatyam video -->
-                <div style="margin: 30px 0; text-align: center;">
-                    <a href="https://www.youtube.com/watch?v=GNN3p-OcmAY" target="_blank" rel="noopener" style="display: inline-block; position: relative; text-decoration: none;">
-                        <img src="https://img.youtube.com/vi/GNN3p-OcmAY/hqdefault.jpg" alt="Jayanthi Sundar - Bharatanatyam Performance" style="max-width: 100%; width: 560px; border-radius: 12px;">
-                        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 12px; padding: 12px 20px; color: #fff; font-size: 1.2rem; font-weight: bold;">&#9654; Watch on YouTube</span>
-                    </a>
-                </div>
-
-                <!-- Placeholder for Bharatanatyam photos -->
-                <div class="photo-gallery" id="dance-gallery">
-                    <!-- Add Bharatanatyam photos here -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== VOCAL SINGER ==================== -->
-    <section id="vocal-singer" style="padding: 70px 0; background: var(--white);">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title">Vocal Singer</h2>
-                <p class="section-subtitle">The Joy of Music</p>
-
-                <p class="section-text">
-                    Jayanthi Sundar is a passionate <strong>vocal singer</strong> who finds joy and solace in music. Singing has been a constant companion through her multifaceted journey, adding melody to both her personal and professional life.
-                </p>
-                <p class="section-text">
-                    Whether performing at cultural events, community gatherings, or simply sharing music with loved ones, Jayanthi's voice reflects the warmth and depth of her personality. Music, for her, is yet another way of connecting with people and spreading positivity.
-                </p>
-
-                <!-- Placeholder for singing photos/videos -->
-                <div class="photo-gallery" id="singer-gallery">
-                    <!-- Add singing photos here -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== TV INTERVIEWER - DOORDARSHAN ==================== -->
-    <section id="tv-interviewer" style="padding: 70px 0; background: var(--cream);">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title">TV Interviewer</h2>
-                <p class="section-subtitle">Doordarshan &mdash; India's National Television Network</p>
-
-                <p class="section-text">
-                    Jayanthi Sundar has been a <strong>TV Interviewer on Doordarshan</strong>, India's national public television broadcaster. Conducting interviews on the country's most prestigious television network is a testament to her communication skills, poise, and ability to engage with a wide range of personalities and topics.
-                </p>
-                <p class="section-text">
-                    Her natural warmth, sharp questioning style, and deep preparation made her interviews insightful and memorable. This experience on national television further honed her skills as a communicator and public personality, complementing her roles as a Distinguished Toastmaster and Master of Ceremony.
-                </p>
-
-                <!-- Placeholder for Doordarshan interview photos/stills -->
-                <div class="photo-gallery" id="tv-gallery">
-                    <!-- Add Doordarshan interview photos here -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== KINDERGARTEN TEACHER ==================== -->
-    <section id="kindergarten-teacher" style="padding: 70px 0; background: var(--cream);">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title">Kindergarten Teacher</h2>
-                <p class="section-subtitle">Nurturing Young Minds</p>
-
-                <p class="section-text">
-                    Among the many roles Jayanthi Sundar has embraced, one of the most heartwarming is that of a <strong>Kindergarten Teacher</strong>. Working with young children requires a special kind of patience, creativity, and love &mdash; qualities that Jayanthi embodies naturally.
-                </p>
-                <p class="section-text">
-                    Her experience as an educator of young minds has given her a deep appreciation for the foundations of learning and the importance of nurturing curiosity from an early age. This role, perhaps more than any other, reflects the caring and compassionate core of her personality.
-                </p>
-
-                <!-- Placeholder for teaching photos -->
-                <div class="photo-gallery" id="teacher-gallery">
-                    <!-- Add kindergarten teaching photos here -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== AUTHOR - GUT LEADERSHIP ==================== -->
-    <section id="gut-leadership" style="padding: 70px 0; background: var(--white);">
+    <!-- ==================== 4. AUTHOR ==================== -->
+    <section id="author" style="padding: 40px 0; background: var(--cream);">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
                 <h2 class="section-title">Author</h2>
@@ -1050,27 +898,265 @@
                     Jayanthi Sundar is the author of <strong>"Gut Leadership"</strong> &mdash; a book that brings together her unique expertise in functional nutrition, corporate leadership, and personal transformation. The book explores the profound connection between gut health and effective leadership.
                 </p>
                 <p class="section-text">
-                    Drawing from her diverse experiences as a software professional, corporate trainer, functional nutrition coach, and Distinguished Toastmaster, Jayanthi presents a compelling case for why leaders must pay attention to their gut &mdash; both literally and figuratively. "Gut Leadership" is a testament to her belief that true leadership begins with self-care and awareness.
+                    Drawing from her diverse experiences as a corporate trainer, functional nutrition coach, and Distinguished Toastmaster, Jayanthi presents a compelling case for why leaders must pay attention to their gut &mdash; both literally and figuratively. "Gut Leadership" is a testament to her belief that true leadership begins with self-care and awareness.
                 </p>
+
+                <div style="margin: 30px 0; text-align: center;">
+                    <img src="Images/518262209_10239761557765057_199221039258001224_n.jpg" alt="Jayanthi Sundar with the Tamil edition of Gut Leadership" style="max-width: 100%; width: 560px; border-radius: 12px;">
+                </div>
 
                 <div class="card" style="margin-top: 30px;">
                     <h4>Gut Leadership</h4>
                     <p style="margin-bottom: 15px;">A groundbreaking book that bridges the gap between gut health science and leadership excellence. Discover how nurturing your gut can transform your ability to lead, decide, and inspire.</p>
-                    <!-- Add book cover image and purchase link when available -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== QUALIFICATIONS ==================== -->
-    <section id="qualifications" style="padding: 70px 0; background: var(--cream);">
+    <!-- ==================== 5. ARTIST ==================== -->
+    <section id="artist" style="padding: 40px 0; background: var(--white);">
         <div class="container">
             <div style="max-width: 900px; margin: 0 auto;">
-                <h2 class="section-title">Academic Qualifications</h2>
-                <p class="section-subtitle">A Lifelong Learner</p>
+                <h2 class="section-title">Artist</h2>
+                <p class="section-subtitle">Bharatanatyam &mdash; A Lifelong Passion</p>
 
                 <p class="section-text">
-                    Jayanthi Sundar's academic journey reflects her insatiable curiosity and her commitment to continuous learning. Her qualifications span the sciences, the arts, and specialized wellness certifications &mdash; a true testament to her multifaceted personality.
+                    Jayanthi Sundar is a trained <strong>Bharatanatyam artist</strong> and <strong>Master of Fine Arts (MFA)</strong>, carrying forward a lifelong passion for this ancient Indian classical dance form. Bharatanatyam is not just a performing art for Jayanthi &mdash; it is a spiritual practice, a discipline, and a way of life.
+                </p>
+                <p class="section-text">
+                    Her training in Bharatanatyam has enriched every other facet of her life &mdash; from the grace she brings to the stage as an emcee, to the discipline she applies in her professional career, to the mindfulness she channels into her wellness practice. Dance remains at the heart of who she is.
+                </p>
+
+                <!-- Dance videos - Row 1 -->
+                <div style="margin: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center;">
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=GNN3p-OcmAY" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+                            <img src="https://img.youtube.com/vi/GNN3p-OcmAY/hqdefault.jpg" alt="Jayanthi Sundar - Bharatanatyam Performance" style="width: 100%; border-radius: 12px;">
+                            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 10px; padding: 8px 14px; color: #fff; font-size: 0.9rem; font-weight: bold;">&#9654; Watch</span>
+                        </a>
+                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--navy-600); font-style: italic;">Bharatanatyam Performance</p>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=AnhhMwthHbk" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+                            <img src="https://img.youtube.com/vi/AnhhMwthHbk/hqdefault.jpg" alt="Jayanthi Sundar - B Grade Artist at Podhigai TV Doordarshan" style="width: 100%; border-radius: 12px;">
+                            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 10px; padding: 8px 14px; color: #fff; font-size: 0.9rem; font-weight: bold;">&#9654; Watch</span>
+                        </a>
+                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--navy-600); font-style: italic;">B Grade Artist at Podhigai TV, Doordarshan</p>
+                    </div>
+                </div>
+
+                <!-- Dance videos - Row 2 -->
+                <div style="margin: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center;">
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=qll1ATYvHlo" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+                            <img src="https://img.youtube.com/vi/qll1ATYvHlo/hqdefault.jpg" alt="Jayanthi Sundar - Dance on Bharathiyar Song" style="width: 100%; border-radius: 12px;">
+                            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 10px; padding: 8px 14px; color: #fff; font-size: 0.9rem; font-weight: bold;">&#9654; Watch</span>
+                        </a>
+                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--navy-600); font-style: italic;">Dance on Bharathiyar Song</p>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=1yit-8yAbCo" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+                            <img src="https://img.youtube.com/vi/1yit-8yAbCo/hqdefault.jpg" alt="Jayanthi Sundar - Dance for a Hindustani Devotional Song" style="width: 100%; border-radius: 12px;">
+                            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 10px; padding: 8px 14px; color: #fff; font-size: 0.9rem; font-weight: bold;">&#9654; Watch</span>
+                        </a>
+                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--navy-600); font-style: italic;">Dance for a Hindustani Devotional Song</p>
+                    </div>
+                </div>
+
+                <!-- Dance videos - Row 3 -->
+                <div style="margin: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center;">
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=3t0Q6slqc8s" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+                            <img src="https://img.youtube.com/vi/3t0Q6slqc8s/hqdefault.jpg" alt="Jayanthi Sundar - Dance at Toastmasters International Conclave" style="width: 100%; border-radius: 12px;">
+                            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 10px; padding: 8px 14px; color: #fff; font-size: 0.9rem; font-weight: bold;">&#9654; Watch</span>
+                        </a>
+                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--navy-600); font-style: italic;">Dance at Toastmasters International Conclave</p>
+                    </div>
+                    <div></div>
+                </div>
+
+                <!-- Dance performances -->
+                <div class="img-grid">
+                    <div>
+                        <img src="Images/Arangetram.JPG" alt="Jayanthi Sundar - Arangetram 1983">
+                        <p>Arangetram, 1983</p>
+                    </div>
+                    <div>
+                        <img src="Images/dancer.jpg" alt="Jayanthi Sundar - Bharatanatyam">
+                    </div>
+                </div>
+
+                <div class="img-grid">
+                    <div>
+                        <img src="Images/Dance.jpg" alt="Jayanthi Sundar - Bharatanatyam performance">
+                    </div>
+                    <div>
+                        <img src="Images/france1.jpg" alt="Jayanthi Sundar - Dance program at Meylon, France">
+                        <p>Dance program at Meylon, France</p>
+                    </div>
+                </div>
+
+                <!-- Recognitions -->
+                <div class="img-grid">
+                    <div>
+                        <img src="Images/Kalaikaveri.jpg" alt="Jayanthi Sundar presenting a paper at Kalaikaveri College of Fine Arts">
+                        <p>Paper presentation at Kalaikaveri College of Fine Arts</p>
+                    </div>
+                    <div>
+                        <img src="Images/515441553_10239139373690844_2303235089967402971_n.jpg" alt="Jayanthi Sundar receiving memento from Sri Nalli Chinnasami Chetty at Mudhra Anniversary">
+                        <p>Memento from Sri Nalli Chinnasami Chetty, Mudhra anniversary, 2011</p>
+                    </div>
+                </div>
+
+                <!-- With Gurus -->
+                <div class="img-grid">
+                    <div>
+                        <img src="Images/With Padma Subramanian.jpg" alt="Jayanthi Sundar being felicitated by Guru Padma Subramaniam">
+                        <p>Being felicitated by Guru Padma Subramaniam</p>
+                    </div>
+                    <div>
+                        <img src="Images/With Guru Chitra Viswewaran.jpg" alt="Jayanthi Sundar with her Guru Chitra Visweswaran">
+                        <p>With Guru Chitra Visweswaran</p>
+                    </div>
+                    <div>
+                        <img src="Images/With Guru Chitra Viswewaran and Sri Visweswaran.jpg" alt="Jayanthi Sundar with Guru Chitra Visweswaran and Sri Visweswaran">
+                        <p>With Guru Chitra Visweswaran and Sri Visweswaran</p>
+                    </div>
+                </div>
+
+                <!-- Newspaper review -->
+                <div style="margin: 30px 0; text-align: center;">
+                    <img src="Images/dinamalar review.jpg" alt="Dinamalar newspaper review of Jayanthi Sundar's dance performance" style="max-width: 100%; width: 560px; border-radius: 12px;">
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--navy-600); font-style: italic;">Dance performance review in Dinamalar</p>
+                </div>
+
+                <!-- Carnatic Music -->
+                <h3 class="section-heading" id="carnatic-music">Carnatic Vocal Music</h3>
+                <p class="section-text">
+                    Jayanthi is a trained <strong>Carnatic vocalist</strong>, having learnt from <strong>Sri Neyveli Ganesh</strong> (grandson of the legendary Alathur Brothers) and <strong>Smt Ranjani Chander</strong> (daughter of Bombay Balamani). Music, like dance, has been a lifelong companion that adds depth and melody to everything she does.
+                </p>
+
+                <div style="margin: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center;">
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=BkmFuw0S6jY" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+                            <img src="https://img.youtube.com/vi/BkmFuw0S6jY/hqdefault.jpg" alt="Jayanthi Sundar - Carnatic Vocal Performance" style="width: 100%; border-radius: 12px;">
+                            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 10px; padding: 8px 14px; color: #fff; font-size: 0.9rem; font-weight: bold;">&#9654; Watch</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=uyW4di3cwCI" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+                            <img src="https://img.youtube.com/vi/uyW4di3cwCI/hqdefault.jpg" alt="Jayanthi Sundar - Devotional Song at Houston, 2023" style="width: 100%; border-radius: 12px;">
+                            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 10px; padding: 8px 14px; color: #fff; font-size: 0.9rem; font-weight: bold;">&#9654; Watch</span>
+                        </a>
+                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--navy-600); font-style: italic;">Devotional song at Houston, 2023</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 6. MEDIA ==================== -->
+    <section id="media" style="padding: 40px 0; background: var(--cream);">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 class="section-title">Media</h2>
+                <p class="section-subtitle">Doordarshan &amp; All India Radio</p>
+
+                <h3 class="section-heading">TV Interviewer &mdash; Doordarshan</h3>
+                <p class="section-text">
+                    Jayanthi Sundar has been a <strong>TV Interviewer on Doordarshan</strong>, India's national public television broadcaster. Conducting interviews on the country's most prestigious television network is a testament to her communication skills, poise, and ability to engage with a wide range of personalities and topics.
+                </p>
+
+                <div style="margin: 30px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; text-align: center;">
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=LTzfeh8xvDY" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+                            <img src="https://img.youtube.com/vi/LTzfeh8xvDY/hqdefault.jpg" alt="Interview with Guru Smt Chitra Visweswaran - Part 1" style="width: 100%; border-radius: 12px;">
+                            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 10px; padding: 8px 14px; color: #fff; font-size: 0.9rem; font-weight: bold;">&#9654; Watch</span>
+                        </a>
+                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--navy-600); font-style: italic;">Guru Smt Chitra Visweswaran (Part 1)</p>
+                    </div>
+                    <div>
+                        <a href="https://www.youtube.com/watch?v=RPsBnrIr3Nc" target="_blank" rel="noopener" style="display: block; position: relative; text-decoration: none;">
+                            <img src="https://img.youtube.com/vi/RPsBnrIr3Nc/hqdefault.jpg" alt="Interview with Guru Smt Chitra Visweswaran - Part 2" style="width: 100%; border-radius: 12px;">
+                            <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 10px; padding: 8px 14px; color: #fff; font-size: 0.9rem; font-weight: bold;">&#9654; Watch</span>
+                        </a>
+                        <p style="margin-top: 8px; font-size: 0.85rem; color: var(--navy-600); font-style: italic;">Guru Smt Chitra Visweswaran (Part 2)</p>
+                    </div>
+                </div>
+
+                <div style="margin: 30px 0; text-align: center;">
+                    <a href="https://www.youtube.com/watch?v=zNimn8qsXnQ" target="_blank" rel="noopener" style="display: inline-block; position: relative; text-decoration: none;">
+                        <img src="https://img.youtube.com/vi/zNimn8qsXnQ/hqdefault.jpg" alt="Jayanthi Sundar interviewing Dance Maestro C.V. Chandrasekar on Podhigai TV" style="max-width: 100%; width: 560px; border-radius: 12px;">
+                        <span style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(255,0,0,0.85); border-radius: 12px; padding: 12px 20px; color: #fff; font-size: 1.2rem; font-weight: bold;">&#9654; Watch on YouTube</span>
+                    </a>
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--navy-600); font-style: italic;">Interview with Dance Maestro C.V. Chandrasekar on Podhigai TV</p>
+                </div>
+
+                <h3 class="section-heading" id="all-india-radio">Science Speaker &mdash; All India Radio</h3>
+                <p class="section-text">
+                    Jayanthi Sundar has been a <strong>science speaker on All India Radio (AIR)</strong>, India's national public radio broadcaster. Her talks brought scientific concepts to a wide audience across the country, accessible on medium wave radio and car radios alike.
+                </p>
+
+                <blockquote style="margin: 25px 0; padding: 20px 25px; background: var(--gray-100); border-left: 4px solid var(--gold-500); font-style: italic; color: var(--navy-800); border-radius: 0 8px 8px 0;">
+                    "Please listen to my science talks... in All India Radio... today and Saturday.... if you have a radio with medium wave... else use a car radio.... your feedback most welcome..."
+                    <span style="display: block; margin-top: 10px; font-size: 0.85rem; font-style: normal; color: var(--navy-600);">&mdash; Jayanthi Sundar, December 2017</span>
+                </blockquote>
+
+                <div class="img-grid">
+                    <div>
+                        <img src="Images/467871882_10236036396478353_2882118195075906712_n.jpg" alt="Jayanthi Sundar - All India Radio Science Talks">
+                    </div>
+                    <div>
+                        <img src="Images/Science Talk at All Indian Radio.jpg" alt="Jayanthi Sundar - Science Talk at All India Radio">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 7. TECH LEADER ==================== -->
+    <section id="tech-leader" style="padding: 40px 0; background: var(--white);">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 class="section-title">Tech Leader</h2>
+                <p class="section-subtitle">18 Years at Cognizant</p>
+
+                <p class="section-text">
+                    Jayanthi Sundar spent <strong>18 years at Cognizant</strong> serving as a <strong>Scrum Master, Project Manager, and Team Leader</strong>. She built an all-women team that became a benchmark for collaboration and performance within the organization.
+                </p>
+                <p class="section-text">
+                    Her extensive experience in the software industry forms the backbone of her versatility &mdash; enabling her to bridge technology with wellness, communication, and leadership. This rare combination makes her uniquely positioned to understand and address the challenges faced by today's professionals.
+                </p>
+
+                <div class="img-grid">
+                    <div>
+                        <img src="Images/Cognizant.jpg" alt="Jayanthi Sundar at Cognizant">
+                        <p>At Cognizant</p>
+                    </div>
+                    <div>
+                        <img src="Images/20140219_103950.jpg" alt="Jayanthi Sundar at Cognizant China">
+                        <p>At Cognizant, China</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== 8. ABOUT & QUALIFICATIONS ==================== -->
+    <section id="about" style="padding: 40px 0; background: var(--cream);">
+        <div class="container">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h2 class="section-title">About Jayanthi</h2>
+                <p class="section-subtitle">The Person Behind the Roles</p>
+
+                <div style="margin: 30px 0; text-align: center;">
+                    <img src="Images/with husband sundararaman.jpg" alt="Jayanthi Sundar with husband Sundararaman" style="max-width: 100%; width: 400px; border-radius: 12px;">
+                    <p style="margin-top: 10px; font-size: 0.9rem; color: var(--navy-600); font-style: italic;">With her ever-supporting husband, Sundararaman</p>
+                </div>
+
+                <h3 class="section-heading">Academic Qualifications</h3>
+                <p class="section-text">
+                    Jayanthi's academic journey reflects her insatiable curiosity and commitment to continuous learning. Her qualifications span the sciences, the arts, and specialized wellness certifications.
                 </p>
 
                 <div style="display: grid; gap: 20px; margin-top: 30px;">
@@ -1080,7 +1166,7 @@
                     </div>
                     <div class="card-alt">
                         <h4>Chemical Engineering</h4>
-                        <p>An engineering degree in Chemical Engineering, providing a strong technical foundation that served as the launching pad for her IT career and later her understanding of functional nutrition science.</p>
+                        <p>An engineering degree that provided a strong technical foundation, launching her IT career and later her understanding of functional nutrition science.</p>
                     </div>
                 </div>
 
@@ -1089,7 +1175,7 @@
                 <div style="display: grid; gap: 20px;">
                     <div class="card-alt">
                         <h4>Certificate in Functional Nutrition</h4>
-                        <p>A specialized certification that forms the scientific backbone of Thrive Gut Academy. This credential validates Jayanthi's expertise in personalized nutrition, gut health assessments, and evidence-based wellness interventions.</p>
+                        <p>A specialized certification that forms the scientific backbone of Thrive Gut Academy, validating her expertise in personalized nutrition, gut health assessments, and evidence-based wellness interventions.</p>
                     </div>
                     <div class="card-alt">
                         <h4>Distinguished Toastmaster (DTM)</h4>
@@ -1104,30 +1190,75 @@
         </div>
     </section>
 
+    <!-- ==================== 9. CONTACT / BOOK ME ==================== -->
+    <section id="contact" style="padding: 40px 0; background: var(--navy-800);">
+        <div class="container">
+            <div style="max-width: 700px; margin: 0 auto; text-align: center;">
+                <h2 style="font-family: var(--font-display); font-size: 2rem; color: var(--gold-400); margin-bottom: 10px;">Book Jayanthi</h2>
+                <p style="color: rgba(255,255,255,0.8); margin-bottom: 30px; font-size: 1.05rem; line-height: 1.8;">
+                    Available for keynote speaking, corporate training, wellness workshops, emceeing, and life coaching engagements.
+                </p>
+
+                <form action="https://formsubmit.co/jayanthisundar2k@yahoo.com" method="POST" style="text-align: left; max-width: 500px; margin: 0 auto 30px;">
+                    <input type="hidden" name="_subject" value="New Booking Enquiry from Website">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_template" value="table">
+                    <div style="margin-bottom: 15px;">
+                        <label style="color: rgba(255,255,255,0.7); font-size: 0.85rem; display: block; margin-bottom: 5px;">Name</label>
+                        <input type="text" name="name" required style="width: 100%; padding: 10px 15px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; border-radius: 6px; font-size: 0.95rem;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label style="color: rgba(255,255,255,0.7); font-size: 0.85rem; display: block; margin-bottom: 5px;">Email</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 10px 15px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; border-radius: 6px; font-size: 0.95rem;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label style="color: rgba(255,255,255,0.7); font-size: 0.85rem; display: block; margin-bottom: 5px;">Enquiry Type</label>
+                        <select name="enquiry_type" required style="width: 100%; padding: 10px 15px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; border-radius: 6px; font-size: 0.95rem;">
+                            <option value="" style="color: #333;">Select...</option>
+                            <option value="Keynote Speaking" style="color: #333;">Keynote Speaking</option>
+                            <option value="Corporate Training" style="color: #333;">Corporate Training</option>
+                            <option value="Wellness Workshop" style="color: #333;">Wellness Workshop</option>
+                            <option value="Master of Ceremony" style="color: #333;">Master of Ceremony</option>
+                            <option value="Life Coaching" style="color: #333;">Life Coaching</option>
+                            <option value="Other" style="color: #333;">Other</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label style="color: rgba(255,255,255,0.7); font-size: 0.85rem; display: block; margin-bottom: 5px;">Message</label>
+                        <textarea name="message" rows="4" required style="width: 100%; padding: 10px 15px; border: 1px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: #fff; border-radius: 6px; font-size: 0.95rem; resize: vertical;"></textarea>
+                    </div>
+                    <button type="submit" class="btn-gold" style="width: 100%; border: none; cursor: pointer; text-align: center;">Send Enquiry &rarr;</button>
+                </form>
+
+                <div style="margin-bottom: 20px;">
+                    <a href="https://www.linkedin.com/in/jayanthispeaks/" target="_blank" class="btn-gold">Connect on LinkedIn &rarr;</a>
+                </div>
+
+                <p style="color: rgba(255,255,255,0.5); font-size: 0.85rem;">Chennai, India | Available for in-person and virtual engagements worldwide</p>
+            </div>
+        </div>
+    </section>
+
     <!-- ==================== FOOTER ==================== -->
     <footer class="site-footer">
         <div class="container">
             <div class="footer-logo">Jayanthi <span>Sundar</span></div>
             <div class="footer-links">
-                <a href="#thrive-gut-academy">Thrive Gut Academy</a>
+                <a href="#wellness-coach">Wellness Coach</a>
                 <a href="#corporate-trainer">Corporate Trainer</a>
-                <a href="#software-professional">Software Professional</a>
-                <a href="#toastmaster">Toastmaster</a>
-                <a href="#bharatanatyam">Bharatanatyam</a>
-                <a href="#vocal-singer">Singer</a>
-                <a href="#tv-interviewer">TV Interviewer</a>
-                <a href="#gut-leadership">Author</a>
-                <a href="#qualifications">Qualifications</a>
+                <a href="#speaker">Speaker</a>
+                <a href="#author">Author</a>
+                <a href="#artist">Artist</a>
+                <a href="#media">Media</a>
+                <a href="#tech-leader">Tech Leader</a>
             </div>
             <div class="footer-links" style="margin-bottom: 15px;">
                 <a href="https://www.linkedin.com/in/jayanthispeaks/" target="_blank">LinkedIn</a>
                 <a href="https://www.instagram.com/jayanthi_functional_nutrition/" target="_blank">Instagram</a>
-                <a href="mailto:jayanthisundar2k@yahoo.com">Email</a>
-                <a href="tel:+919840282465">Call</a>
+                <a href="https://www.youtube.com/@functionalnutrition-Jayanthi/shorts" target="_blank">YouTube</a>
             </div>
             <p class="footer-copy">
-                Venkatesa Nilayam, Saint Marys Road, SBI Colony, Alwarpet, Chennai, Tamil Nadu, India<br>
-                &copy; 2026 Jayanthi Sundar. All rights reserved.
+&copy; 2026 Jayanthi Sundar. All rights reserved.
             </p>
         </div>
     </footer>
