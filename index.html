@@ -1313,7 +1313,7 @@
     var today = new Date();
     var d = today.getDate(), m = today.getMonth(), y = today.getFullYear();
     // Show only on June 11, 2026
-    if (d === 11 && m === 5 && y === 2026) {
+    if (d <= 11 && m === 5 && y === 2026) {
         var overlay = document.getElementById('bday-overlay');
         var canvas = document.getElementById('confetti-canvas');
         var music = document.getElementById('bday-music');
