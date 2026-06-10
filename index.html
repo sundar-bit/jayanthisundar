@@ -1295,11 +1295,12 @@
         <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; color: #fff; margin-bottom: 20px;">Jayanthi!</h2>
         <p style="color: rgba(255,255,255,0.7); font-size: 1.1rem; max-width: 500px; margin: 0 auto 15px; line-height: 1.8;">A woman of art, wellness, leadership, and endless reinvention. This website celebrates your incredible journey.</p>
         <p style="color: #ddb93a; font-family: 'Playfair Display', serif; font-size: 1.3rem; font-style: italic; margin-bottom: 25px;">With love, Sundar</p>
-        <p style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">Tap anywhere to explore</p>
+        <p data-hint style="color: rgba(255,255,255,0.4); font-size: 0.8rem;">Tap anywhere to play music</p>
     </div>
 </div>
 <canvas id="confetti-canvas" style="position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:10000; display:none;"></canvas>
 <audio id="bday-music" preload="auto">
+    <source src="https://upload.wikimedia.org/wikipedia/commons/d/d4/Happy_Birthday_to_You_%28Sung%29.ogg" type="audio/ogg">
     <source src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Happy_birthday_to_you_%28piano%29.ogg" type="audio/ogg">
 </audio>
 <style>
@@ -1353,12 +1354,18 @@
         }
         drawConfetti();
 
-        // Play melody
-        music.volume = 0.3;
-        music.play().catch(function(){});
-
-        // Dismiss on click
-        overlay.addEventListener('click', function() {
+        // Dismiss on click — play music on first interaction, stop on second
+        var musicStarted = false;
+        overlay.addEventListener('click', function(e) {
+            if (!musicStarted) {
+                music.volume = 0.4;
+                music.play();
+                musicStarted = true;
+                e.stopPropagation();
+                // Change hint text
+                overlay.querySelector('[data-hint]').textContent = 'Tap again to explore the website';
+                return;
+            }
             overlay.style.display = 'none';
             canvas.style.display = 'none';
             music.pause();
